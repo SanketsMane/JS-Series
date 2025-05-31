@@ -1,0 +1,35 @@
+.canvas{
+width: auto;
+height: auto;
+border: solid black 2px;
+display: inline-block;
+padding: 20px;
+
+}
+span{
+    display: block;;
+}
+
+.button {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 10px 0;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    vertical-align: middle;
+}
+
+#gray   { background: #888; }
+#red    { background: #e74c3c; }
+#green  { background: #27ae60; }
+#blue   { background: #2980b9; }
+#yellow { background: #f1c40f; }
+
+.button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    border-color: #aaa;
+}
