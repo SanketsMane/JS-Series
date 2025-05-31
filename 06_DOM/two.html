@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Sanket and Code </title>
+    <style>
+    </style>
+</head>
+<body style="background-color: #212121; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children[1]); // This will return undefined because 'Children' is not a valid property, it should be 'children'
+    console.log(parent.children[1].innerHTML);
+     // This will return the second child element
+
+
+     //gettting all children elements using a for loop
+     for(let i=0; i<parent.children.length; i++){
+        console.log(parent.children[i].innerHTML);
+     }
+
+     parent.children[1].style.color = 'red';
+
+     //accessing first and last child elements
+     console.log(parent.firstChild); // This will return the first child element, which is a text node (whitespace) 
+     console.log(parent.firstElementChild);
+     console.log(parent.lastElementChild.style.color = 'blue');
+
+
+     const dayOne = document.querySelector('.day');
+
+     console.log("dayone : " ,dayOne);
+
+
+     console.log("It Will Return Parent element : ",dayOne.parentElement);
+
+     console.log("Next sibling element : ", dayOne.nextElementSibling);
+
+
+     console.log("NODES", parent.ChildNodes); 
+</script>
+</html>
