@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Our Js</title>
+</head>
+<body>
+    <div>
+        <h1>Sanket & Code</h1>
+        <button id="Start">Start</button>
+        <button id="Stop">Stop</button>
+    </div>
+</body>
+<script>
+    let intervalId;
+
+    document.querySelector('#Start').addEventListener('click', function() {
+        intervalId = setInterval(function() {
+            console.log("Start Button Clicked");
+        }, 2000);
+    });
+
+    document.querySelector('#Stop').addEventListener('click', function() {
+        console.log("Stop Button Clicked");
+        clearInterval(intervalId);
+    });
+</script>
+</html>

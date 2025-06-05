@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Code</title>
+</head>
+<body>
+    <div>
+        <h1>Sanket & Code</h1>
+        <button class="btn" id="Stop">Click Here</button>
+    </div>
+    
+</body>
+<script>
+    setTimeout(function(){
+        console.log("Timeout executed");    //after timeout it will execute once
+    }, 2000);
+
+    const stoploop = setInterval(function(){
+        console.log("Interval Executed");    //after interval it will execute continously
+    },2000)
+
+    const Sanket = function(){
+        console.log("Sanket");
+    }
+    setTimeout(Sanket,2000); //this will execute after 2 seconds
+
+    const change = function() {
+        document.querySelector('h1').innerHTML = "sanket & Code Updated";
+    };
+    const changeMe = setTimeout(change,5000);
+     //this will now work as expected
+
+
+
+    //how to stop timeout 
+
+    document.querySelector('#Stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        clearInterval(stoploop)
+        console.log("Timeout Stopped")
+    });
+</script>
+</html>
