@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Api Request Demo</h1>
+
+
+
+        <figure class="table-container"><table>
+<thead>
+<tr>
+<th>Value</th>
+<th>State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>UNSENT</code></td>
+<td>Client has been created. <code>open()</code> not called yet.</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>OPENED</code></td>
+<td><code>open()</code> has been called.</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td><code>HEADERS_RECEIVED</code></td>
+<td><code>send()</code> has been called, and headers and status are available.</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td><code>LOADING</code></td>
+<td>Downloading; <code>responseText</code> holds partial data.</td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td><code>DONE</code></td>
+<td>The operation is complete.</td>
+</tr>
+</tbody>
+</table></figure>
+    </div>
+
+
+    <div class="container">
+        <h2>Sankets Github Profile</h2>
+        <h6>Data from API</h6>
+        <h3 id="name"></h3>
+        <h3 id="address"></h3>
+        <h3 id="bio"></h3>
+
+    </div>
+
+    
+</body>
+<script>
+    const reqUrl = 'https://api.github.com/users/SanketsMane'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', reqUrl)
+    console.log("here")
+    console.log(xhr.readyState)
+    xhr.onreadystatechange = function(){
+        console.log("state changed to : "+xhr.readyState)
+        //function will automaticaly run when the state changes
+        
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(data.location)
+            console.log(data.name)
+
+
+            //integrate the data with the html
+            
+            document.getElementById('name').innerHTML = "Name: "+ data.name;
+            document.getElementById('address').innerHTML = "Address: "+ data.location;
+            document.getElementById('bio').innerHTML = "Bio: "+ data.bio;
+        }
+    }
+
+    xhr.send();
+    </script>
+</html>

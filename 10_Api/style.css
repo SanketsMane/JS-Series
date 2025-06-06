@@ -1,0 +1,135 @@
+
+body {
+    background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(60, 72, 88, 0.12);
+    padding: 36px 32px 28px 32px;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3a4b;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(60, 72, 88, 0.06);
+    margin: 0 auto;
+    font-size: 1.08rem;
+}
+
+th, td {
+    padding: 16px 18px;
+    text-align: left;
+}
+
+th {
+    background: #e3eaf2;
+    color: #2d3a4b;
+    font-weight: 600;
+    border-bottom: 2px solid #c7d0db;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    transition: background 0.2s;
+}
+
+tbody tr:nth-child(even) {
+    background: #f0f4f8;
+}
+
+tbody tr:hover {
+    background: #e6f0fa;
+}
+
+code {
+    background: #eaf1fb;
+    color: #1a3a5d;
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 0.98em;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 18px 4vw 14px 4vw;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    th, td {
+        padding: 10px 8px;
+        font-size: 0.98rem;
+    }
+}
+
+/* Advanced styling for GitHub profile info */
+#name {
+    color: #2563eb;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+    transition: color 0.3s;
+}
+
+#address {
+    color: #059669;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px rgba(5, 150, 105, 0.08);
+    transition: color 0.3s;
+}
+
+#bio {
+    color: #f59e42;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px rgba(245, 158, 66, 0.08);
+    transition: color 0.3s;
+}
+
+.container h2 {
+    color: #1e293b;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    #name, #address, #bio {
+        font-size: 1rem;
+    }
+    .container h2 {
+        font-size: 1.1rem;
+    }
+}
