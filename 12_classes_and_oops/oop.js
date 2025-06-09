@@ -37,7 +37,9 @@ function UserS(username, isloggedIn, loginCount){
    this.username =  username;
    this.isloggedIn = isloggedIn;
    this.loginCount = loginCount;
-
+    this.greeting = function(){
+        console.log(`Welcome ${this.uername}`);
+    }
 
     return this;
 }
@@ -53,3 +55,11 @@ const UserThree = new UserS('Sanket',false,7);
 
 console.log('Data of UserTwo: ', UserTwo);
 console.log('Data of UserThree: ', UserThree);
+
+console.log('Constructor : ',UserTwo.constructor);
+
+
+//note - when we use new keyword it will create new empty object or new instance where freash data can be stored, when new object created it will call constructor function and all arguments will be injected into the constructor and after than we can access it 
+
+//
+
