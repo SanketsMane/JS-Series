@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Checked</title>
+    <style>
+    /* Basic reset and page style */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f0f2f5;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Button styling */
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    button:active {
+        transform: scale(0.97);
+        background-color: #004494;
+    }
+</style>
+
+</head>
+<body>
+    <button>Button Clicked</button>
+    
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:3000"
+
+            //requirement 
+
+            document.querySelector('button').addEventListener('click',this.handelClick.bind(this))
+
+        }
+        handelClick(){
+            console.log("Button Clicked")
+            console.log(this)
+            console.log(this.server)
+        }
+    }
+
+    const app = new React();
+    </script>
+</html>
